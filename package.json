@@ -1,0 +1,22 @@
+{
+  "name": "homework-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "browser-sync src -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAndrew271988/homework-10.git"
+  },
+  "author": "Andrij Pogrebnyak <pogrebnyakae@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrAndrew271988/homework-10/issues"
+  },
+  "homepage": "https://github.com/MrAndrew271988/homework-10#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.0"
+  }
+}

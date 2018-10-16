@@ -34,7 +34,12 @@ img {
 
 .page-header {
   padding-bottom: 228px;
-  background-image: linear-gradient( to bottom,rgba(243, 129, 129, 0.9),rgba(252, 227, 138, 0.9)), url("../img/Layer-15.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(243, 129, 129, 0.9),
+      rgba(252, 227, 138, 0.9)
+    ),
+    url("../img/Layer-15.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -166,13 +171,15 @@ img {
 
 /* Section Services */
 
+.services {
+  padding-top: 44px;
+}
+
 .services-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 44px;
-  padding-bottom: 64px;
 }
 
 .services-header__subtitle {
@@ -193,6 +200,7 @@ img {
   color: #333333;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 64px;
 }
 
 .services-header__title::after {
@@ -250,6 +258,7 @@ img {
   height: 32px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   position: absolute;
   left: 25px;
   top: 0px;
@@ -279,6 +288,259 @@ img {
   background-image: url(../img/IMAGE.png);
 }
 
+/* Section Team */
+
+.team {
+  padding-bottom: 82px;
+}
+
+.team-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 90px;
+}
+
+.team-header__subtitle {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #333333;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.team-header__title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.team-header__title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 4px;
+  background-color: #f38181;
+  margin-top: 38px;
+}
+
+.team-header__caption {
+  text-align: center;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  width: 980px;
+}
+
+.team-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-div {
+  margin-top: 28px;
+}
+
+.team-div__name {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.team-div__position {
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  text-align: center;
+}
+
+.team-list__item {
+  flex: 0 0 380px;
+  position: relative;
+}
+
+.team-list__item .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 470px;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    rgba(243, 129, 129, 0.7) 0%,
+    rgba(252, 227, 138, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity 200ms linear, transform 200ms ease-in;
+  z-index: 1;
+}
+
+.team-image {
+  transition: transform 200ms ease-in;
+}
+
+.team-list__item:hover .team-image {
+  transform: translate(-10px, -10px);
+}
+
+.team-list__item:hover .overlay {
+  box-shadow: 10px 10px 0px rgb(149, 225, 211);
+  transform: translate(-10px, -10px);
+  opacity: 1;
+}
+
+.socials-list {
+  display: flex;
+  width: 224px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials-list__link1,
+.socials-list__link2,
+.socials-list__link3,
+.socials-list__link4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background-color: rgb(252, 227, 138);
+  transition: background-color 0.7s linear;
+}
+
+.socials-list__link1:hover,
+.socials-list__link2:hover,
+.socials-list__link3:hover,
+.socials-list__link4:hover {
+  background-color: #95e1d3;
+}
+
+.socials-list__svg {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  fill: rgb(243, 129, 129);
+}
+
+/* Footer */
+
+.page-footer {
+  border-top: 1px solid rgb(229, 229, 229);
+}
+
+.page-footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 62px;
+}
+
+.page-footer__subtitle {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.page-footer__link {
+  text-decoration: none;
+  color: #f38181;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
+button {
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.signup-form input[required]:invalid {
+  border: 2px solid #ff0000;
+}
+
+.signup-form input[required]:valid {
+  border: 2px solid #43f40d;
+}
+
+.signup-form input {
+  padding: 8px 0px 8px 12px;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.signup-form input::placeholder {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 24px;
+  color: #cccccc;
+}
+
+.signup-form__button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(149, 225, 211);
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  transition: background-color 1s linear;
+}
+
+.signup-form__button:hover {
+  background-color: #FF4500;
+}
+
+.Rectangle_25 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(231, 231, 231);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 1179px;
+  top: 2481px;
+  width: 232px;
+  height: 42px;
+  z-index: 96;
+}
+
 
 /* Media */
 
@@ -295,23 +557,23 @@ img {
   .services-list__item--alarm::before {
     background-image: url(../img/ALARM@2x.png);
   }
-  
+
   .services-list__item--line::before {
     background-image: url(../img/LINEGRAPH@2x.png);
   }
-  
+
   .services-list__item--computer::before {
     background-image: url(../img/COMPUTER@2x.png);
   }
-  
+
   .services-list__item--book::before {
     background-image: url(../img/BOOK@2x.png);
   }
-  
+
   .services-list__item--home::before {
     background-image: url(../img/HOME@2x.png);
   }
-  
+
   .services-list__item--image::before {
     background-image: url(../img/IMAGE@2x.png);
   }
